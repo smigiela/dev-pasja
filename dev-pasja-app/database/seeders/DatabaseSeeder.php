@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     {
 //         \App\Models\User::factory(10)->create();
 
-        if (!User::where('name', 'Admin')) // jeśli nie ma admina to trzeba go utworzyć
+        if (!User::where('name', 'Admin')->first()) // jeśli nie ma admina to trzeba go utworzyć
         {
             User::factory()->create([
                 'name' => 'Admin',
