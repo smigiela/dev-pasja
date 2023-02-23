@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'reset'     => 'Hasło zostało zresetowane!',
     'sent'      => 'Przypomnienie hasła zostało wysłane!',
