@@ -22,6 +22,20 @@ return new class extends Migration
                 ->constrained()
                 ->nullOnDelete();
         });
+
+
+        $categories = [
+            ['id' => 1, 'name' => 'Programowanie'],
+            ['id' => 2, 'name' => 'Systemy Operacyjne'],
+            ['id' => 3, 'name' => 'Windows'],
+            ['id' => 4, 'name' => 'Linux'],
+            ['id' => 5, 'name' => 'Porady'],
+            ['id' => 6, 'name' => 'Szkolenia'],
+            ['id' => 7, 'name' => 'Tutoriale'],
+            ['id' => 8, 'name' => 'Materiały wideo']
+        ];
+
+        \App\Models\Admin\Blog\Category::insert($categories);
     }
 
     /**
