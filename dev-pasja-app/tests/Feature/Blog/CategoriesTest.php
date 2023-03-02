@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Blog;
 
-use App\Models\Category;
+use App\Models\Admin\Blog\Category;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
