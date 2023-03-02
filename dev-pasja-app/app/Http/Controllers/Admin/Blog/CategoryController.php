@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin\Blog;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
-use App\Models\Category;
+use App\Models\Admin\Blog\Category;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 
@@ -31,9 +32,9 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request): RedirectResponse
     {
-        Category::create($request->all());
+        Category::create($request->validated());
 
-        return redirect()->route();
+        return redirect()->route('categories');
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Admin\Blog;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -14,6 +14,8 @@ class Category extends Model
     public $timestamps = false;
 
     protected $fillable = ['name'];
+
+    protected $table = 'blog_categories';
 
     public function parent(): BelongsTo
     {
